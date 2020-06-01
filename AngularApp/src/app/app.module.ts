@@ -9,6 +9,7 @@ import { ChatComponent } from './chat/chat.component';
 import { AlojamientoComponent } from './alojamiento/alojamiento.component';
 import { CasaComponent } from './casa/casa.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
+import { FormLoginComponent } from './form-login/form-login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormResidenciaComponent } from './form-residencia/form-residencia.compo
     ChatComponent,
     AlojamientoComponent,
     CasaComponent,
-    FormResidenciaComponent
+    FormResidenciaComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
