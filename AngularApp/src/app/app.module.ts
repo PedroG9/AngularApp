@@ -8,6 +8,7 @@ import { TipsComponent } from './tips/tips.component';
 import { ChatComponent } from './chat/chat.component';
 import { AlojamientoComponent } from './alojamiento/alojamiento.component';
 import { CasaComponent } from './casa/casa.component';
+import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CasaComponent } from './casa/casa.component';
     TipsComponent,
     ChatComponent,
     AlojamientoComponent,
-    CasaComponent
+    CasaComponent,
+    FormResidenciaComponent
   ],
   imports: [
     BrowserModule,
