@@ -1,28 +1,66 @@
-<header>
-    <div class="wrapper">
-        <div class="boton"></div>
-    </div>
-    
-    <nav class="featured_block--menu-navegacion">
-        <ul>
-            <li><a [routerLink]="['/home']" routerLinkActive="activa">Home</a></li>
-            <li><a [routerLink]="['/tips']">Tips</a></li>
-            <li><a [routerLink]="['/alojamiento']">Alojamiento</a></li>
-            <li><a [routerLink]="['/chat']">Chat</a></li>
-            <li><a [routerLink]="['/login']">Login</a></li>
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">AppName</a>
+    <li><a [routerLink]="['/home']" routerLinkActive="activa">Home</a></li>
+    <li><a [routerLink]="['/tips']">Tips</a></li>
+    <li><a [routerLink]="['/alojamiento']">Alojamiento</a></li>
+    <li><a [routerLink]="['/chat']">Chat</a></li>
+    <li><a [routerLink]="['/login']">Login</a></li>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">AppName</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item ml-4 mr-4">
+                <a class="nav-link" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item mr-4">
+                <a class="nav-link" [routerLink]="['/tips']">Tips</a>
+            </li>
+            <li class="nav-item mr-4">
+                <a class="nav-link" [routerLink]="['/alojamiento']">Alojamiento</a>
+            </li>
+            <li class="nav-item mr-4">
+                <a class="nav-link" [routerLink]="['/chat']">Chat</a>
+            </li>
         </ul>
-    </nav>
-</header>
 
-<section>
-    <h2>Sobre nosotros</h2>
-    <div class="nosotros">
-        <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/94312921_1249327848731540_8794185352353939456_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=6aIaH81o1S0AX_kXSHI&_nc_ht=scontent-mad1-1.xx&oh=f2639b135a051145126d2afee4c1dd5d&oe=5EFA6388" alt="narciso">
-        <p>Informacion sobre nosotros.</p>
     </div>
-</section>
-<section>
-    <h2>Posibles destinos</h2>
-    <p>AQUI LA GALERIA DE IMAGENES</p>
-</section>
+    <button class="btn btn-outline-info dropdown-toggle my-2 my-sm-0 mr-5" type="submit">Perfil</button>
+    <img src="" alt="">
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img class="d-block w-100 h-100" src="https://www.consignor.com/wp-content/uploads/10019/06/Senior-Front-End-Developer-1080x675.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://img-a.udemycdn.com/course/750x422/1650610_2673_5.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 h-100" src="https://media-exp1.licdn.com/dms/image/C561BAQGpxRlo9gp3cQ/company-background_10000/0?e=2159024400&v=beta&t=TrelGvVGOofaPX-01588Ei8BJf0_8taYBiGFlk9zyME" alt="Third slide">
+        </div>
+    </div>
+</div>
+<div>
+    <section>
+        <h2>Sobre nosotros</h2>
+        <div>
+            <img class="about"
+                src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/94312921_1249327848731540_8794185352353939456_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=6aIaH81o1S0AX_kXSHI&_nc_ht=scontent-mad1-1.xx&oh=f2639b135a051145126d2afee4c1dd5d&oe=5EFA6388"
+                alt="narciso">
+            <p>Informacion sobre nosotros. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero totam
+                temporibus deleniti eaque, ratione distinctio, quam magni minus quia nobis nisi voluptatum esse
+                aliquam, ab ad excepturi nostrum perferendis modi?</p>
+        </div>
+    </section>
+    <section>
+        <h2>Posibles destinos</h2>
+        <p>AQUI LA GALERIA DE IMAGENES</p>
+    </section>
 
+</div>
