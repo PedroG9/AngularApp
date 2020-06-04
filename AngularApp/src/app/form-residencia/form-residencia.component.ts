@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-residencia',
@@ -7,7 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormResidenciaComponent implements OnInit {
 
-  constructor() { }
+  formResidencia: FormGroup;
+
+  constructor() {
+    this.formResidencia = new FormGroup ({
+      titulo: new FormControl('', [
+        Validators.required
+      ]),
+      direccion: new FormControl('', [
+        Validators.required
+      ]),
+      detalles: new FormControl('', [
+        Validators.required
+      ]),
+      descripcion: new FormControl('', [
+        Validators.required
+      ]),
+      imagenes: new FormControl('', [
+        Validators.required
+      ])
+    });
+  };
 
   ngOnInit(): void {
   }
