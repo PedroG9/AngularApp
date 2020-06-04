@@ -10,6 +10,7 @@ import { AlojamientoComponent } from './alojamiento/alojamiento.component';
 import { CasaComponent } from './casa/casa.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
 import { FormLoginComponent } from './form-login/form-login.component';
+import { TraductorComponent } from './traductor/traductor.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormLoginComponent } from './form-login/form-login.component';
     AlojamientoComponent,
     CasaComponent,
     FormResidenciaComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    TraductorComponent
   ],
   imports: [
     BrowserModule,

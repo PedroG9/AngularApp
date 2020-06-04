@@ -5,6 +5,7 @@ import { TipsComponent } from './tips/tips.component';
 import { AlojamientoComponent } from './alojamiento/alojamiento.component';
 import { ChatComponent } from './chat/chat.component';
 import { FormLoginComponent } from './form-login/form-login.component';
+import { TraductorComponent } from './traductor/traductor.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'tips', component: TipsComponent },
   { path: 'alojamiento', component: AlojamientoComponent },
   { path: 'chat', component: ChatComponent },
+  { path: 'tranductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
   { path: '**', redirectTo: 'home' }
 ];
