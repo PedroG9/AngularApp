@@ -1,0 +1,14 @@
+nav {
+    text-align: center;
+}
+
+p {
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+p, a {
+    color: white;
+    text-decoration: none;
+}
+

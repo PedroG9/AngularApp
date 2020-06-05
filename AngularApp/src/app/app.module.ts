@@ -12,6 +12,8 @@ import { CasaComponent } from './casa/casa.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TraductorComponent } from './traductor/traductor.component';
     CasaComponent,
     FormResidenciaComponent,
     FormLoginComponent,
-    TraductorComponent
+    TraductorComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

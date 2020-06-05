@@ -8,13 +8,14 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
 
 
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'tips', component: TipsComponent },
   { path: 'alojamiento', component: AlojamientoComponent },
   { path: 'chat', component: ChatComponent },
-  { path: 'tranductor', component: TraductorComponent },
+  { path: 'traductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
   { path: '**', redirectTo: 'home' }
 ];
