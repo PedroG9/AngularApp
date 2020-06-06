@@ -13,7 +13,8 @@ export class FormResidenciaComponent implements OnInit {
   constructor() {
     this.formResidencia = new FormGroup ({
       titulo: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(10)
       ]),
       direccion: new FormControl('', [
         Validators.required

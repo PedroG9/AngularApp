@@ -24,6 +24,17 @@
         </ul>
 
     </div>
-    <button class="btn btn-outline-info dropdown-toggle my-2 my-sm-0 mr-5" type="submit">Perfil</button>
+    <div class="dropdown">
+        <button class="btn btn-outline-info dropdown-toggle my-2 my-sm-0 mr-5" type="button" id="dropdownMenu2"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Perfil
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <a class="dropdown-item" href="#">Mi perfil</a>
+            <a class="dropdown-item" [routerLink]="['/añadirResidencia']">Añadir residencia</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cerrar sesion</a>
+        </div>
+    </div>
     <img src="" alt="">
 </nav>
