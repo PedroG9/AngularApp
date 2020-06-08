@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ml-4 mr-4">
+            <a class="nav-link" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link" [routerLink]="['/tips']">Tips</a>
+          </li>
+          <li class="nav-item mr-4">
+              <a class="nav-link" [routerLink]="['/alojamiento']">Alojamiento</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" [routerLink]="['/chat']">Chat</a>
+            </li>
+      </ul>
+        <button class="btn btn-outline-info dropdown-toggle my-2 my-sm-0 mr-5" type="submit">Perfil</button>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                Tip 1
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam officiis eius eaque labore odio voluptas necessitatibus perferendis odit possimus deleniti tempore velit consequuntur, voluptatum at maxime veniam earum nulla.
+              Ducimus neque laborum voluptas dolorum animi non provident cupiditate ipsam eius minima tempore, porro quo aspernatur veniam repellat sunt quia expedita rerum consequatur sed vero impedit. Eligendi eveniet eaque aliquam!
+              Ducimus, temporibus maiores nihil reprehenderit, labore nesciunt, eligendi illo consequatur quidem nemo adipisci commodi iure praesentium voluptates quod quaerat? Culpa autem officiis natus deserunt corrupti blanditiis. Nobis enim voluptates aspernatur!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo">
+                Tip 2
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam officiis eius eaque labore odio voluptas necessitatibus perferendis odit possimus deleniti tempore velit consequuntur, voluptatum at maxime veniam earum nulla.
+              Ducimus neque laborum voluptas dolorum animi non provident cupiditate ipsam eius minima tempore, porro quo aspernatur veniam repellat sunt quia expedita rerum consequatur sed vero impedit. Eligendi eveniet eaque aliquam!
+              Ducimus, temporibus maiores nihil reprehenderit, labore nesciunt, eligendi illo consequatur quidem nemo adipisci commodi iure praesentium voluptates quod quaerat? Culpa autem officiis natus deserunt corrupti blanditiis. Nobis enim voluptates aspernatur!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Tip 3
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam officiis eius eaque labore odio voluptas necessitatibus perferendis odit possimus deleniti tempore velit consequuntur, voluptatum at maxime veniam earum nulla.
+              Ducimus neque laborum voluptas dolorum animi non provident cupiditate ipsam eius minima tempore, porro quo aspernatur veniam repellat sunt quia expedita rerum consequatur sed vero impedit. Eligendi eveniet eaque aliquam!
+              Ducimus, temporibus maiores nihil reprehenderit, labore nesciunt, eligendi illo consequatur quidem nemo adipisci commodi iure praesentium voluptates quod quaerat? Culpa autem officiis natus deserunt corrupti blanditiis. Nobis enim voluptates aspernatur!
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

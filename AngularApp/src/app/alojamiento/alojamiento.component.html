@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ml-4 mr-4">
+            <a class="nav-link" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link" [routerLink]="['/tips']">Tips</a>
+          </li>
+          <li class="nav-item mr-4">
+              <a class="nav-link" [routerLink]="['/alojamiento']">Alojamiento</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" [routerLink]="['/chat']">Chat</a>
+            </li>
+      </ul>
+        <button class="btn btn-outline-info dropdown-toggle my-2 my-sm-0 mr-5" type="submit">Perfil</button>
+    </div>
+</nav>
+
+<div class="container d-flex flex-row">
+    <div class="col-3">
+        <h5>Duración de la estancia</h5>
+        <label>Entrada</label>
+        <input type="date" class="form-control" min="2020-06-06">
+        <label>Salida</label>
+        <input type="date" class="form-control">
+    </div>
+    <div class="col-3 align-right">
+        <h5>Tipo de habitación</h5>
+        <select name="" id="tipoCama">
+            <option value="">Selecciona el tipo</option>
+            <option value="unaCama">Una cama</option>
+            <option value="dobleCama">Cama doble</option>
+            <option value="dosCama">Habitación compartida</option>
+        </select>
+    </div>
+</div>
+<div class="container mt-5 rounded col-4">
+  <div class="card mb-4">
+    <img src="https://static1.abc.es/media/play/2017/09/28/rick-morty-kaJC--1240x698@abc.jpg" class="card-img-top">
+    <a class="card-title" [routerLink]="['/habitacion']">Casa 1</a>
+    <p class="card-text"></p>
+    <div class="colum d-flex justify-content-around">
+      <p class="card-text">Usario: </p>
+      <p class="card-text">Fecha:</p>
+    </div>
+</div>
