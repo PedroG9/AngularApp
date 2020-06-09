@@ -7,6 +7,7 @@ import { ChatComponent } from './chat/chat.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'chat', component: ChatComponent },
   { path: 'traductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
-  { path: 'añadirResidencia', component: FormResidenciaComponent },
+  { path: 'añadirresidencia', component: FormResidenciaComponent },
+  {path: 'contactus', component: ContactUsComponent},
   { path: '**', redirectTo: 'home' }
 ];
 

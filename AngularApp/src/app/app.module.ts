@@ -14,6 +14,7 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     FormLoginComponent,
     TraductorComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

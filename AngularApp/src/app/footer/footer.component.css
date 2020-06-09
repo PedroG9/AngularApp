@@ -1,6 +1,8 @@
 footer {
     width: 100%;
-    position: fixed;
+    height: 60px;
+    position: absolute;
+    padding: 1rem;
     bottom: 0;
 }
 
@@ -9,8 +11,16 @@ p {
     margin-left: 1em;
 }
 
-p, a {
+footer p {
     color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover{
     text-decoration: none;
 }
 
