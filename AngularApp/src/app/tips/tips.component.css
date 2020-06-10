@@ -1,0 +1,22 @@
+img {
+    height: 60px;
+    width: 60px;
+}
+
+th{
+    text-align: center;
+}
+
+td a {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.policia {
+    margin-top: 30px;
+}
+
+.facebook {
+    margin-top: 20px;
+}
