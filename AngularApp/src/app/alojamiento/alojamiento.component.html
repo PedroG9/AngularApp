@@ -1,7 +1,8 @@
 <div class="bg-light py-3">
     <div class="container">
         <h5>Ciudad de destino</h5>
-        <select id="destino">
+        <select id="destino" (change)="onChangeDestino($event)">
+            <option value="">Selecciona una ciudad</option>
             <option value="madrid">Madrid</option>
             <option value="barcelona">Barcelona</option>
             <option value="valencia">Valencia</option>
@@ -9,13 +10,25 @@
             <option value="sevilla">Sevilla</option>
         </select>
     </div>
-    <div class="container d-flex flex-row">
-        <div class="col-3">
+    <div class="container">
+        <div class="">
             <h5>Duración de la estancia</h5>
             <label>Entrada</label>
             <input type="date" class="form-control" min="2020-06-06">
             <label>Salida</label>
             <input type="date" class="form-control">
+        </div>
+    </div>
+    <div class="container d-flex flex-row">
+        <div class="container">
+            <h5>Tipo de alojamiento</h5>
+            <select id="tipoAlojamiento">
+                <option value="">Selecciona una opción</option>
+                <option value="estudio">Estudio</option>
+                <option value="habitacion">Habitación compartida</option>
+                <option value="piso">Piso</option>
+                <option value="chalet">Chalet</option>
+            </select>
         </div>
         <div class="col-3 align-right">
             <h5>Tipo de habitación</h5>
@@ -23,7 +36,7 @@
                 <option value="">Selecciona el tipo</option>
                 <option value="unaCama">Una cama</option>
                 <option value="dobleCama">Cama doble</option>
-                <option value="dosCama">Habitación compartida</option>
+                <option value="dosCama">Más de una cama</option>
             </select>
         </div>
         <div class="col-3">
