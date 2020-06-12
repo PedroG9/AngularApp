@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Alojamiento } from '../models/alojamiento.model';
+import { AlojamientoService } from '../servicios/alojamiento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alojamiento',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlojamientoComponent implements OnInit {
 
-  constructor() { }
+  arrAlojamiento: Alojamiento[];
 
-  ngOnInit(): void {
+  constructor(private alojamientoService: AlojamientoService, private router: Router) { 
+   
+  }
+
+  async ngOnInit() {
+    this.arrAlojamiento = await this.alojamientoService.getAll();
+  }
+
+  onChangeDestino($event) {
+    
+
+    
   }
 
 }
