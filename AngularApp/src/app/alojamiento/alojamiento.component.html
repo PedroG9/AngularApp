@@ -1,28 +1,31 @@
 <div class="bg-light py-3">
-    <div class="container">
-        <h5>Ciudad de destino</h5>
-        <select id="destino" (change)="onChangeDestino($event)">
-            <option value="">Selecciona una ciudad</option>
-            <option value="madrid">Madrid</option>
-            <option value="barcelona">Barcelona</option>
-            <option value="valencia">Valencia</option>
-            <option value="bilbao">Bilbao</option>
-            <option value="sevilla">Sevilla</option>
-        </select>
-    </div>
-    <div class="container">
-        <div class="">
+    <div class="container-fluid d-flex flex-row">
+        <div class="container col-4">
+            <h5>Ciudad de destino</h5>
+            <select class="form-control" id="destino" (change)="onChangeDestino($event)">
+                <option value="">Selecciona una ciudad</option>
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="valencia">Valencia</option>
+                <option value="bilbao">Bilbao</option>
+                <option value="sevilla">Sevilla</option>
+            </select>
+        </div>
+        <div class="container col-8 mb-3">
             <h5>Duración de la estancia</h5>
-            <label>Entrada</label>
-            <input type="date" class="form-control" min="2020-06-06">
-            <label>Salida</label>
-            <input type="date" class="form-control">
+            <div class="d-flex flex-row">
+                <label class="m-2">Entrada</label>
+                <input type="date" class="form-control" min="2020-06-06">
+                <label class="m-2">Salida</label>
+                <input type="date" class="form-control">
+            </div>
         </div>
     </div>
+   
     <div class="container d-flex flex-row">
-        <div class="container">
+        <div class="container col-3">
             <h5>Tipo de alojamiento</h5>
-            <select id="tipoAlojamiento">
+            <select class="form-control" id="tipoAlojamiento">
                 <option value="">Selecciona una opción</option>
                 <option value="estudio">Estudio</option>
                 <option value="habitacion">Habitación compartida</option>
@@ -32,7 +35,7 @@
         </div>
         <div class="col-3 align-right">
             <h5>Tipo de habitación</h5>
-            <select id="tipoCama">
+            <select class="form-control" id="tipoCama">
                 <option value="">Selecciona el tipo</option>
                 <option value="unaCama">Una cama</option>
                 <option value="dobleCama">Cama doble</option>

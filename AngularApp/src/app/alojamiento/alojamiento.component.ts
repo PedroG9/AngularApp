@@ -16,14 +16,21 @@ export class AlojamientoComponent implements OnInit {
    
   }
 
-  async ngOnInit() {
-    this.arrAlojamiento = await this.alojamientoService.getAll();
+  ngOnInit() {
+    this.recuperarTodosAlojamientos();
   }
 
-  onChangeDestino($event) {
+ /*  onChangeDestino($event) {
+    if($event.target.value === '') {
+      this.recuperarTodosAlojamientos();
+    }else {
+      this.alojamientoService.
+    }
     
-
-    
+  } */
+  
+  async recuperarTodosAlojamientos() {
+    this.arrAlojamiento = await this.alojamientoService.getAll();
   }
 
 }

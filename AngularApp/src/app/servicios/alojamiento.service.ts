@@ -23,4 +23,12 @@ export class AlojamientoService {
     return this.httpClient.get<Alojamiento[]>(this.baseUrl, httpOptions).toPromise();
 
   }
+
+/*   getByDestino(pDestino: string): Promise<Alojamiento[]> {
+    return new Promise ((resolve, reject) => {
+      const arrFiltrado = this.baseUrl.filter(alojamiento => {
+        return 
+      })
+    })
+  }  */
 }
