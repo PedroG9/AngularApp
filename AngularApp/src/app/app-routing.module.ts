@@ -8,6 +8,7 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CasaComponent } from './casa/casa.component';
 
 
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'traductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
   { path: 'añadirresidencia', component: FormResidenciaComponent },
-  {path: 'contactus', component: ContactUsComponent},
+  { path: 'casa', component: CasaComponent },
+  { path: 'contactus', component: ContactUsComponent },
   { path: '**', redirectTo: 'home' }
 ];
 
