@@ -41,7 +41,7 @@ import { AgmMapComponent } from './agm-map/agm-map.component';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBTVA871cCbqVAtJB17E_nLYuI2HLvFLiw'
+      apiKey: ''
     })
 
   ],
