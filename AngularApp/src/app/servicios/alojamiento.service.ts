@@ -10,7 +10,7 @@ export class AlojamientoService {
   baseUrl: string;
 
   constructor(private httpClient: HttpClient) { 
-    this.baseUrl = 'http://localhost:300/[]'
+    this.baseUrl = 'http://localhost:300/api/alejamiento'
 
   }
 
@@ -22,13 +22,11 @@ export class AlojamientoService {
     }
     return this.httpClient.get<Alojamiento[]>(this.baseUrl, httpOptions).toPromise();
 
-  }
+  };
 
-/*   getByDestino(pDestino: string): Promise<Alojamiento[]> {
-    return new Promise ((resolve, reject) => {
-      const arrFiltrado = this.baseUrl.filter(alojamiento => {
-        return 
-      })
-    })
+  /* getByDestino(pDestino: string): Promise<Alojamiento[]> {
+    //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
   }  */
+
+  getByFecha
 }

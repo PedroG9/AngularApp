@@ -11,23 +11,27 @@ import { Router } from '@angular/router';
 export class AlojamientoComponent implements OnInit {
 
   arrAlojamiento: Alojamiento[];
+  currentDate: Date;
 
   constructor(private alojamientoService: AlojamientoService, private router: Router) { 
-   
+   this.currentDate = new Date();
   }
 
   ngOnInit() {
     this.recuperarTodosAlojamientos();
   }
 
- /*  onChangeDestino($event) {
+  onChangeDestino($event) {
     if($event.target.value === '') {
       this.recuperarTodosAlojamientos();
     }else {
-      this.alojamientoService.
+      /* this.alojamientoService.getByDestino($event.target.value)
+        .then(alojamiento => {
+          this.arrAlojamiento = alojamiento;
+        }); */
     }
     
-  } */
+  }
   
   async recuperarTodosAlojamientos() {
     this.arrAlojamiento = await this.alojamientoService.getAll();
