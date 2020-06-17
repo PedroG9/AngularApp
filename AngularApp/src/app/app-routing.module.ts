@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'tips', component: TipsComponent },
   { path: 'alojamiento', component: AlojamientoComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'misMensajes', component: ChatComponent },
   { path: 'traductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
   { path: 'añadirresidencia', component: FormResidenciaComponent },

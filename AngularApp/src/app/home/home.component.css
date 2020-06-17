@@ -7,12 +7,10 @@ section #about_usCenter img{
     justify-content: center;
 }
 
-#about_us{
-    padding: 50px;
+.hero img {
+    width: 100vw;
 }
 
-#about_usCenter {
-    height: 500px;
-    width: 1100px;
-    margin: 0 auto;
+.slide img {
+    height: 35vw;
 }
