@@ -20,4 +20,9 @@ export class MensajesService {
   newMessage(): Promise<Mensaje[]> {
     return this.httpClient.get<Mensaje[]>(`${this.baseUrl}`).toPromise();
   }
+
+  deleteMessage(): Promise<Mensaje[]> {
+    return this.httpClient.get<Mensaje[]>(`${this.baseUrl}/idMensaje`).toPromise();
+  }
+
 }

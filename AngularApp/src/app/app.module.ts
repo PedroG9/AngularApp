@@ -16,6 +16,7 @@ import { TraductorComponent } from './traductor/traductor.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     TraductorComponent,
     HeaderComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,
