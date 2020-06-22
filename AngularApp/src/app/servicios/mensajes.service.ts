@@ -16,5 +16,8 @@ export class MensajesService {
   getAll(): Promise<Mensaje[]> {
     return this.httpClient.get<Mensaje[]>(`${this.baseUrl}/:id`).toPromise();
   }
+
+  newMessage(): Promise<Mensaje[]> {
+    return this.httpClient.get<Mensaje[]>(`${this.baseUrl}`).toPromise();
+  }
 }
- 
