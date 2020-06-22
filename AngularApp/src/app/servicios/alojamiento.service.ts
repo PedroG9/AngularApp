@@ -10,7 +10,7 @@ export class AlojamientoService {
   baseUrl: string;
 
   constructor(private httpClient: HttpClient) { 
-    this.baseUrl = 'http://localhost:300/api/alejamiento'
+    this.baseUrl = 'http://localhost:300/api/alojamiento'
 
   }
 

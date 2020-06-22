@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MensajesComponent } from './mensajes/mensajes.component';
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
-    MensajesComponent
+    MensajesComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
