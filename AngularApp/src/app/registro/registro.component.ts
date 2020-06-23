@@ -41,4 +41,10 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    this.usuariosService.registro(this.formRegistro.value)
+      .then(response => {
+        
+      })
+  }
 }
