@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
 import { RegistroComponent } from './registro/registro.component';
+import { AgmMapComponent } from './agm-map/agm-map.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,18 @@ import { RegistroComponent } from './registro/registro.component';
     FooterComponent,
     ContactUsComponent,
     MensajesComponent,
-    RegistroComponent
+    RegistroComponent,
+    AgmMapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

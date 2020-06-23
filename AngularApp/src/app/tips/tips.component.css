@@ -1,6 +1,18 @@
-img {
+.facebook img {
     height: 60px;
     width: 60px;
+}
+
+.mapa_metro {
+    height: 60vw;
+    width: 96vw;
+    margin-left: 1.3em;
+    border: 1px solid grey;
+}
+
+.titulo_mapa h2 {
+    text-align: center;
+    margin: 2em;
 }
 
 th{

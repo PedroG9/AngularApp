@@ -8,8 +8,12 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { TraductorComponent } from './traductor/traductor.component';
 import { FormResidenciaComponent } from './form-residencia/form-residencia.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+<<<<<<< HEAD
 import { MensajesComponent } from './mensajes/mensajes.component';
 
+=======
+import { CasaComponent } from './casa/casa.component';
+>>>>>>> martes
 
 
 
@@ -18,12 +22,17 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'tips', component: TipsComponent },
   { path: 'alojamiento', component: AlojamientoComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'misMensajes', component: ChatComponent },
   { path: 'traductor', component: TraductorComponent },
   { path: 'login', component: FormLoginComponent },
   { path: 'añadirresidencia', component: FormResidenciaComponent },
+<<<<<<< HEAD
   { path: 'contactus', component: ContactUsComponent },
   { path: 'mensajes', component: MensajesComponent },
+=======
+  { path: 'casa', component: CasaComponent },
+  { path: 'contactus', component: ContactUsComponent },
+>>>>>>> martes
   { path: '**', redirectTo: 'home' }
 ];
 
