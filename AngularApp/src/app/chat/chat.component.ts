@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Mensaje } from '../models/mensaje.model';
+import { ChatService } from '../servicios/chat.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  arrMensajes: Mensaje[];
 
-  ngOnInit(): void {
+  constructor(private chatService: ChatService, private router: Router) { 
+  }
+
+  async ngOnInit() {
+    this.arrMensajes = await this.chatService.getAllMensajes(1);
+    
+
+    
+    console.log(this.arrMensajes);
   }
 
 }

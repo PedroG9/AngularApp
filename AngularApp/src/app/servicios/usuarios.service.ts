@@ -12,8 +12,8 @@ export class UsuariosService {
     this.baseUrl = 'http://localhost:3000/api/usuarios';
   }
 
-  getUser(): Promise<any> {
-    return this.httpClient.get(`${this.baseUrl}/:id`).toPromise();
+  getUser(pUser): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/${pUser}`).toPromise();
   }
 
   registro(formValues): Promise<any> {

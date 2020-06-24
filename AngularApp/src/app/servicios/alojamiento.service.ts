@@ -10,7 +10,7 @@ export class AlojamientoService {
   baseUrl: string;
 
   constructor(private httpClient: HttpClient) { 
-    this.baseUrl = 'http://localhost:300/api/alojamiento'
+    this.baseUrl = 'http://localhost:3000/api/alojamientos'
 
   }
 
@@ -28,5 +28,5 @@ export class AlojamientoService {
     //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
   }  */
 
-  getByFecha
+  
 }

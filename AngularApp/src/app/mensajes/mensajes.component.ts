@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class MensajesComponent implements OnInit {
 
-  conversaciones: Mensaje[];
+  arrConversacion: Mensaje[];
 
   constructor(private mensajesService: MensajesService, private router: Router) { }
 
   async ngOnInit() {
     const response = await this.mensajesService.getAll();
-    this.conversaciones = response;
+    this.arrConversacion = response;
   }
 
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
@@ -45,7 +45,7 @@ import { AgmMapComponent } from './agm-map/agm-map.component';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyBTVA871cCbqVAtJB17E_nLYuI2HLvFLiw'
     })
 
   ],

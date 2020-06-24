@@ -44,7 +44,12 @@ export class RegistroComponent implements OnInit {
   onSubmit() {
     this.usuariosService.registro(this.formRegistro.value)
       .then(response => {
-        
+        if(response.success) {
+          this.router.navigate(['/login']);
+        }
       })
+      .catch(err => {
+        console.log(err);
+      });
   }
 }
