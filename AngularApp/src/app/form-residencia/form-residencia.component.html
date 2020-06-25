@@ -40,7 +40,27 @@
         </div>
         <div class="form-group">
             <label>Imagen</label>
-            <input type="file" class="form-control" placeholder="Introduce la ciudad" formControlName="ciudad">
+            <input type="file" class="form-control" (change)="onFileChange($event)" formControlName="img">
+        </div>
+        <div class="form-group">
+            <label>Servicios</label>
+            <input type="checkbox" class="form-control" formControlName="lavanderia">
+        </div>
+        <div class="form-group">
+            <label>Cocina</label>
+            <input type="checkbox" class="form-control"  formControlName="cocina">
+        </div>
+        <div class="form-group">
+            <label>Baño</label>
+            <input type="checkbox" class="form-control" formControlName="baño">
+        </div>
+        <div class="form-group">
+            <label>Fecha de inicio</label>
+            <input type="date" class="form-control" formControlName="fecha_inicio">
+        </div>
+        <div class="form-group">
+            <label>Fecha final</label>
+            <input type="date" class="form-control" formControlName="fecha_final">
         </div>
         <input type="submit" value="Enviar" class="mt-5 btn btn-info btn-block">
     </form>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Mensaje } from '../models/mensaje.model';
+import { Conversacion } from '../models/conversacion.model'
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,20 @@ export class ChatService {
 
   //Inyectar servicio en el constructor del componente. Crear una funcion en el servicio que se llame GetAllMensajes. Crear en el componente una propiedad(ArrMensajes) que hay que llenarla en el ngOninit llamando al servicio.
 
-  //getAllConversaciones(pIdUsuario): Promise<Conversacion[]>
+  // Conectando con Conversaciones
+
+  getAllConversaciones(pIdUsuario): Promise<Conversacion[]>{
+    return this.httpClient.get<Conversacion[]>(`${this.baseUrlConversacion}/:idUsuario`).toPromise();
+  }
+
+  /* createConversacion(): Promise<Conversacion[]>{
+    return this.httpClient.post<Conversacion[]>(`${this.baseUrlConversacion}`).toPromise();
+  } */
+
+
+
+
+  // Conectando con Mensajes
   
   getAllMensajes(pConversacion): Promise<Mensaje[]> {
     return this.httpClient.get<Mensaje[]>(`${this.baseUrlMensaje}/${pConversacion}`).toPromise();
