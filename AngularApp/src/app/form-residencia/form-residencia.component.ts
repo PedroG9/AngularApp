@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AlojamientoService } from '../servicios/alojamiento.service';
 
 @Component({
   selector: 'app-form-residencia',
@@ -10,7 +11,7 @@ export class FormResidenciaComponent implements OnInit {
 
   formResidencia: FormGroup;
 
-  constructor() {
+  constructor(private alojamientosService: AlojamientoService) {
     this.formResidencia = new FormGroup ({
       titulo: new FormControl('', [
         Validators.required,
@@ -32,6 +33,12 @@ export class FormResidenciaComponent implements OnInit {
   };
 
   ngOnInit(): void {
+
+  }
+
+  onSubmit() {
+    console.log(this.formResidencia.value)
+    //this.alojamientosService.newAlojamiento()
   }
 
 }

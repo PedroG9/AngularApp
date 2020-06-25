@@ -1,31 +1,46 @@
 <div class="m-5 p-5">
-    <form novalidate [formGroup]="formResidencia">
+    <form novalidate [formGroup]="formResidencia" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label>Encabezado del anuncio</label>
-            <input type="text" name="encabezado" class="form-control" formControlName="titulo">
-            <p class="error"
-                *ngIf="formResidencia.controls.nombre.errors?.required && formResidencia.controls.nombre.touched">El
-                campo nombre es requerido.</p>
-            <p class="error"
-                *ngIf="formResidencia.controls.nombre.errors?.minlength && formResidencia.controls.nombre.touched">El
-                campo nombre debe tener una longitud minima de 3 caracteres.</p>
+            <label>Ciudad</label>
+            <select class="form-control" id="ciudad" formControlName="ciudad">
+                <option value="">Selecciona una ciudad</option>
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="valencia">Valencia</option>
+                <option value="bilbao">Bilbao</option>
+                <option value="sevilla">Sevilla</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Tipo de alojamiento</label>
+            <select class="form-control" id="tipoAlojamiento" formControlName="tipo_alojamiento">
+                <option value="">Selecciona una opción</option>
+                <option value="estudio">Estudio</option>
+                <option value="habitacion">Habitación compartida</option>
+                <option value="piso">Piso</option>
+                <option value="chalet">Chalet</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Tipo de habitación</label>
+            <select class="form-control" id="tipoHabitacion" formControlName="tipo_habitacion">
+                <option value="">Selecciona el tipo</option>
+                <option value="unaCama">Una cama</option>
+                <option value="dobleCama">Cama doble</option>
+                <option value="dosCama">Más de una cama</option>
+            </select>
         </div>
         <div class="form-group">
             <label>Dirección</label>
-            <input type="text" name="direccion" class="form-control" formControlName="direccion">
+            <input type="text" class="form-control" placeholder="Introduce la dirección" formControlName="direccion">
         </div>
         <div class="form-group">
-            <label>Detalles de la residencia</label>
-            <input type="text" name="detalles" class="form-control" formControlName="detalles">
+            <label>Descripción</label>
+            <input type="text" class="form-control" placeholder="Añade una descripcion" formControlName="descripcion">
         </div>
         <div class="form-group">
-            <label>Descripción de la residencia</label>
-            <input type="text" name="descripcion" class="form-control" formControlName="descripcion">
-        </div>
-        <div class="form-group">
-            <label>Imágenes</label>
-            <input type="file" name="imagenes" class="form-control" formControlName="imagenes">
-            <p class="error"></p>
+            <label>Imagen</label>
+            <input type="file" class="form-control" placeholder="Introduce la ciudad" formControlName="ciudad">
         </div>
         <input type="submit" value="Enviar" class="mt-5 btn btn-info btn-block">
     </form>

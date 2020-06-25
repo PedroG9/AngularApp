@@ -15,14 +15,21 @@ export class AlojamientoService {
   }
 
   getAll(): Promise<Alojamiento[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'user-token': localStorage.getItem('userToken')
-      })
-    }
-    return this.httpClient.get<Alojamiento[]>(this.baseUrl, httpOptions).toPromise();
+    return this.httpClient.get<Alojamiento[]>(this.baseUrl).toPromise();
 
   };
+
+  newAlojamiento(formValues): Promise<Alojamiento[]> {
+    return this.httpClient.post<Alojamiento[]>(`${this.baseUrl}`, formValues).toPromise();
+  }
+
+  borrarAlojamiento(): Promise<Alojamiento[]> {
+    return this.httpClient.delete<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
+  }
+
+  modificarAlojamiento(formValues): Promise<Alojamiento[]> {
+    return this.httpClient.put<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`, formValues).toPromise();
+  }
 
   /* getByDestino(pDestino: string): Promise<Alojamiento[]> {
     //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
