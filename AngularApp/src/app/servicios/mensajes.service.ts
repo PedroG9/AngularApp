@@ -10,7 +10,7 @@ export class MensajesService {
   baseUrl: string;
 
   constructor(private httpClient: HttpClient) {
-    this.baseUrl = 'http://localhost:3000/api/mensajes'
+    this.baseUrl = 'http://localhost:000/api/mensajes'
   }
 
   getAll(): Promise<Mensaje[]> {
