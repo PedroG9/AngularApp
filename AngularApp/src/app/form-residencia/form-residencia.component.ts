@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AlojamientoService } from '../servicios/alojamiento.service';
-import { HttpHeaders, HttpRequest } from '@angular/common/http';
+import { HttpHeaders, HttpRequest, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form-residencia',
@@ -13,7 +13,7 @@ export class FormResidenciaComponent implements OnInit {
   formResidencia: FormGroup;
   files;
 
-  constructor(private alojamientosService: AlojamientoService) {
+  constructor( private http: HttpClient) {
     this.formResidencia = new FormGroup ({
       ciudad: new FormControl('', [
         Validators.required
@@ -33,6 +33,21 @@ export class FormResidenciaComponent implements OnInit {
       img: new FormControl('',[
         Validators.required
       ]),
+      lavanderia: new FormControl('', [
+        Validators.required
+      ]),
+      cocina: new FormControl('', [
+        Validators.required
+      ]),
+      baño: new FormControl('', [
+        Validators.required
+      ]),
+      fecha_inicio: new FormControl('', [
+        Validators.required
+      ]),
+      fecha_final: new FormControl('', [
+        Validators.required
+      ])
     });
   };
 
@@ -62,9 +77,15 @@ export class FormResidenciaComponent implements OnInit {
     let header = new HttpHeaders();
     header.append('Content-type', 'multipart/form-data');
 
-    const req = new HttpRequest("POST", alojamientosService, fd, {
+    const req = new HttpRequest("POST", "http://localhost:3000/api/alojamientos", fd, {
       headers: header
     });
+    this.http
+      .request(req)
+      .toPromise()
+      .then(result => {
+        console.log(result)
+      })
   }
 
 }
