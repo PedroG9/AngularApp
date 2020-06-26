@@ -2,8 +2,7 @@
     <div class="container-fluid d-flex flex-row">
         <div class="container col-4">
             <h5>Ciudad de destino</h5>
-            <select class="form-control" id="destino"
-            >
+            <select class="form-control" id="destino" (change)="onChangeDestino($event)">
                 <option value="">Selecciona una ciudad</option>
                 <option value="madrid">Madrid</option>
                 <option value="barcelona">Barcelona</option>
@@ -36,7 +35,7 @@
         </div>
         <div class="col-3">
             <h5>Tipo de habitación</h5>
-            <select class="form-control" id="tipoCama">
+            <select class="form-control" id="tipoCama" (change)="OnChangeTipoHab($event)">
                 <option value="">Selecciona el tipo</option>
                 <option value="unaCama">Una cama</option>
                 <option value="dobleCama">Cama doble</option>
@@ -46,13 +45,14 @@
     </div>
 </div>
 
-<div class="container mt-5 rounded col-4">
-  <div class="card mb-4">
-    <img src="https://static1.abc.es/media/play/2017/09/28/rick-morty-kaJC--1240x698@abc.jpg" class="card-img-top">
-    <a class="card-title" [routerLink]="['/casa']">Casa 1</a>
-    <p class="card-text"></p>
-    <div class="colum d-flex justify-content-around">
-      <p class="card-text">Usario: </p>
-      <p class="card-text">Fecha:</p>
+<div class="alojamientos container-fluid mt-5 rounded d-flex flex-row">
+    <div class="alojamiento card mb-4 col-4" *ngFor="let alojamiento of arrAlojamiento">
+        <img [src]="'http://localhost:3000/uploads/' + alojamiento.img" class="card-img-top">
+        <a class="card-title" [routerLink]="['/casa']" (click)="onClickId($event)">{{alojamiento.tipo_habitacion}} en {{alojamiento.direccion}}</a>
+        <p class="card-text"></p>
+        <div class="colum d-flex justify-content-around">
+            <p class="card-text"></p>
+            <p class="card-text">Fecha:{{alojamiento.fecha_inicio}} a {{alojamiento.fecha_final}}</p>
+        </div>
     </div>
 </div>

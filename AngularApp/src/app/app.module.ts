@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
@@ -17,6 +17,8 @@ import { TraductorComponent } from './traductor/traductor.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
+import { RegistroComponent } from './registro/registro.component';
 import { AgmMapComponent } from './agm-map/agm-map.component';
 
 @NgModule({
@@ -33,6 +35,8 @@ import { AgmMapComponent } from './agm-map/agm-map.component';
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
+    MensajesComponent,
+    RegistroComponent,
     AgmMapComponent
   ],
   imports: [
@@ -41,7 +45,7 @@ import { AgmMapComponent } from './agm-map/agm-map.component';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyANsKZFN4hNNIWHsVwaYFTDtRRRyPgShYU'
     })
 
   ],
