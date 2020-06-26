@@ -15,9 +15,18 @@ export class AlojamientoService {
   }
 
   getAll(): Promise<Alojamiento[]> {
-    return this.httpClient.get<Alojamiento[]>(this.baseUrl).toPromise();
+    return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}`).toPromise();
 
   };
+
+  getByIdAlojamiento(): Promise<Alojamiento[]> {
+    return this.httpClient.get<Alojamiento[]>(this.baseUrl)
+  }
+
+
+  /*
+   * Alojamiento
+   */
 
   newAlojamiento(formValues): Promise<Alojamiento[]> {
     return this.httpClient.post<Alojamiento[]>(`${this.baseUrl}`, formValues).toPromise();
