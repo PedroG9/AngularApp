@@ -17,8 +17,12 @@ export class AlojamientoComponent implements OnInit {
    this.currentDate = new Date();
   }
 
-  ngOnInit() {
-    this.recuperarTodosAlojamientos();
+  async ngOnInit() {
+    this.arrAlojamiento = await this.alojamientoService.getAll();
+  }
+
+  onClickId() {
+    this.alojamientoService.getByIdAlojamiento();
   }
 
   onChangeDestino($event) {
@@ -34,7 +38,9 @@ export class AlojamientoComponent implements OnInit {
   }
   
   async recuperarTodosAlojamientos() {
-    this.arrAlojamiento = await this.alojamientoService.getAll();
+    
   }
+
+
 
 }

@@ -20,7 +20,7 @@ export class AlojamientoService {
   };
 
   getByIdAlojamiento(): Promise<Alojamiento[]> {
-    return this.httpClient.get<Alojamiento[]>(this.baseUrl)
+    return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
   }
 
 
