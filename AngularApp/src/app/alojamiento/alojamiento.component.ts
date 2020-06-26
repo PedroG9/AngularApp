@@ -21,8 +21,12 @@ export class AlojamientoComponent implements OnInit {
     this.arrAlojamiento = await this.alojamientoService.getAll();
   }
 
-  onClickId() {
+  onClickId($event) {
     this.alojamientoService.getByIdAlojamiento();
+  }
+
+  onChangeTipoHab($event) {
+    
   }
 
   onChangeDestino($event) {
