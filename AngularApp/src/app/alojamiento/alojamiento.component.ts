@@ -18,17 +18,29 @@ export class AlojamientoComponent implements OnInit {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
     this.recuperarTodosAlojamientos();
+=======
+    this.recuperarTodosAlojamientos()
+  }
+
+  onClickId($event) {
+    this.alojamientoService.getByIdAlojamiento();
+>>>>>>> rama-compartida
+  }
+
+  onChangeTipoHab($event) {
+
   }
 
   onChangeDestino($event) {
     if($event.target.value === '') {
       this.recuperarTodosAlojamientos();
     }else {
-      /* this.alojamientoService.getByDestino($event.target.value)
+      this.alojamientoService.getByDestino($event.target.value)
         .then(alojamiento => {
           this.arrAlojamiento = alojamiento;
-        }); */
+        }); 
     }
     
   }

@@ -24,9 +24,36 @@ export class AlojamientoService {
 
   };
 
+<<<<<<< HEAD
   /* getByDestino(pDestino: string): Promise<Alojamiento[]> {
     //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
   }  */
+=======
+  getByIdAlojamiento(): Promise<Alojamiento[]> {
+    return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
+  }
+
+
+  /*
+   * Alojamiento
+   */
+
+  newAlojamiento(formValues): Promise<Alojamiento[]> {
+    return this.httpClient.post<Alojamiento[]>(`${this.baseUrl}`, formValues).toPromise();
+  }
+
+  borrarAlojamiento(): Promise<Alojamiento[]> {
+    return this.httpClient.delete<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
+  }
+
+  modificarAlojamiento(formValues): Promise<Alojamiento[]> {
+    return this.httpClient.put<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`, formValues).toPromise();
+  }
+
+  getByDestino(pCiudad: string): Promise<Alojamiento[]> {
+  return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/${pCiudad}`).toPromise();
+  }  
+>>>>>>> rama-compartida
 
   getByFecha
 }
