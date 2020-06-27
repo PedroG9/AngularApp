@@ -40,9 +40,9 @@ export class AlojamientoService {
     return this.httpClient.put<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`, formValues).toPromise();
   }
 
-  /* getByDestino(pDestino: string): Promise<Alojamiento[]> {
-    //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
-  }  */
+  getByDestino(pCiudad: string): Promise<Alojamiento[]> {
+  return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/${pCiudad}`).toPromise();
+  }  
 
   
 }

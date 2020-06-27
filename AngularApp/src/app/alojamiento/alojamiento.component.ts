@@ -17,8 +17,8 @@ export class AlojamientoComponent implements OnInit {
    this.currentDate = new Date();
   }
 
-  async ngOnInit() {
-    this.arrAlojamiento = await this.alojamientoService.getAll();
+  ngOnInit() {
+    this.recuperarTodosAlojamientos()
   }
 
   onClickId($event) {
@@ -26,23 +26,23 @@ export class AlojamientoComponent implements OnInit {
   }
 
   onChangeTipoHab($event) {
-    
+
   }
 
   onChangeDestino($event) {
     if($event.target.value === '') {
       this.recuperarTodosAlojamientos();
     }else {
-      /* this.alojamientoService.getByDestino($event.target.value)
+      this.alojamientoService.getByDestino($event.target.value)
         .then(alojamiento => {
           this.arrAlojamiento = alojamiento;
-        }); */
+        }); 
     }
     
   }
   
   async recuperarTodosAlojamientos() {
-    
+    this.arrAlojamiento = await this.alojamientoService.getAll();
   }
 
 
