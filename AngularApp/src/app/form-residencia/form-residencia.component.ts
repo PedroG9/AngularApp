@@ -47,6 +47,9 @@ export class FormResidenciaComponent implements OnInit {
       ]),
       fecha_final: new FormControl('', [
         Validators.required
+      ]),
+      usuario_id: new FormControl('', [
+        Validators.required
       ])
     });
   };
@@ -71,7 +74,8 @@ export class FormResidenciaComponent implements OnInit {
     fd.append("cocina", this.formResidencia.controls.cocina.value);
     fd.append("baño", this.formResidencia.controls.baño.value);
     fd.append("fecha_inicio", this.formResidencia.controls.fecha_inicio.value);
-    fd.append("fecha_final", this.formResidencia.controls.fecha_final.value)
+    fd.append("fecha_final", this.formResidencia.controls.fecha_final.value);
+    fd.append("usuario_id", this.formResidencia.controls.usuario_id.value);
     
 
     let header = new HttpHeaders();
