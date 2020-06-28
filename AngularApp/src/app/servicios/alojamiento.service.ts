@@ -16,10 +16,22 @@ export class AlojamientoService {
     return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}`).toPromise();
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  /* getByDestino(pDestino: string): Promise<Alojamiento[]> {
+    //return Promise.resolve(this.baseUrl.filter(alojamiento => alojamiento.destino === pDestino));
+  }  */
+=======
+>>>>>>> martes
   getByIdAlojamiento(): Promise<Alojamiento[]> {
     return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> martes
   /*
    * Alojamiento
    */
@@ -31,6 +43,18 @@ export class AlojamientoService {
   borrarAlojamiento(): Promise<Alojamiento[]> {
     return this.httpClient.delete<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`).toPromise();
   }
+<<<<<<< HEAD
+=======
+
+  modificarAlojamiento(formValues): Promise<Alojamiento[]> {
+    return this.httpClient.put<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`, formValues).toPromise();
+  }
+
+  getByDestino(pCiudad: string): Promise<Alojamiento[]> {
+  return this.httpClient.get<Alojamiento[]>(`${this.baseUrl}/${pCiudad}`).toPromise();
+  }  
+>>>>>>> rama-compartida
+>>>>>>> martes
 
   modificarAlojamiento(formValues): Promise<Alojamiento[]> {
     return this.httpClient.put<Alojamiento[]>(`${this.baseUrl}/:idAlojamiento`, formValues).toPromise();
