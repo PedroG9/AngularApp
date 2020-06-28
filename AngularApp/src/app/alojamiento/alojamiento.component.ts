@@ -15,25 +15,12 @@ export class AlojamientoComponent implements OnInit {
   }
 
   ngOnInit() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    this.recuperarTodosAlojamientos();
-=======
->>>>>>> martes
+
     this.recuperarTodosAlojamientos()
   }
 
   onClickId($event) {
     this.alojamientoService.getByIdAlojamiento();
-<<<<<<< HEAD
-=======
->>>>>>> rama-compartida
-  }
-
-  onChangeTipoHab($event) {
-
->>>>>>> martes
   }
 
   onChangeTipoHab($event) { }
@@ -47,19 +34,6 @@ export class AlojamientoComponent implements OnInit {
         });
     } else {
       this.recuperarTodosAlojamientos();
-<<<<<<< HEAD
-
-      // this.alojamientoService.getByDestino($event.target.value)
-      //   .then(alojamiento => {
-      //     this.arrAlojamiento = alojamiento;
-      //   });
-=======
-    }else {
-      this.alojamientoService.getByDestino($event.target.value)
-        .then(alojamiento => {
-          this.arrAlojamiento = alojamiento;
-        }); 
->>>>>>> martes
     }
   }
   async recuperarTodosAlojamientos() {
